@@ -1,0 +1,523 @@
+@font-face {
+  font-family: 'MedievalSharp';
+  src: url('MedievalSharp.woff') format('woff');
+  src: url('MedievalSharp.ttf') format('truetype');
+  src: url('MedievalSharp.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('Roboto-Regular.woff') format('woff');
+  src: url('Roboto-Regular.ttf') format('truetype');
+  src: url('Roboto-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('Roboto-Light.woff') format('woff');
+  src: url('Roboto-Light.ttf') format('truetype');
+  src: url('Roboto-Light.otf') format('opentype');
+  font-weight: lighter;
+  font-style: oblique;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body, html, #mainContainer{
+  height:auto;
+  width:auto;
+}
+
+@media screen and (max-width: 600px){
+
+  #mainContainer{
+    display: flex;
+    background-color: #997f71;
+    overflow-x: hidden;
+  }
+  .nav{
+    display: inline-flex;
+    justify-content: center;
+    background-color: #2F3F32;
+    overflow: hidden;
+    position: fixed;
+    top:50px;
+    width:100%;
+  }
+  .nav ul{
+    display: inline-flex;
+    overflow: hidden;
+  }
+  .nav a{
+    font-family:MedievalSharp;
+    display: inline-flex;
+    color: #f2f2f2;
+    padding: 1.8vw 1.8vw;
+    text-decoration: none;
+    font-size: 3.5vw;
+  }
+  .nav a:hover{
+    display: inline-flex;
+    background-color: #eee;
+    color: black;
+  }
+  .nav a.active{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: #8CA665;
+    color: white;
+  }
+  #headerSection{
+    height:50px;
+    width:100%;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('skyrimBridgeHeader.jpg');
+    background-size: cover;
+    position: fixed;
+  }
+  #contentContainer, #contentContainer{
+    width: 100%;
+    height: 100%;
+    padding-top: 5em;
+    display:inline-flex;
+    text-align:center;
+    flex-direction: column;
+  }
+  #footerSection{
+    width: 100%;
+    height:7.5vw;
+    padding: 1vw;
+    background-color: #2F3F32;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .grid-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 2vw;
+    background-color: #997f71;
+    padding: 2vw;
+  }
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 1vw 1vw;
+    font-size: 30px;
+  }
+  .item, .item1, .item2{
+    grid-column: 1 / span 2;
+  }
+  .about1, .about2{
+    grid-column: 1 / span 2;
+  }
+  .house, .house1{
+    grid-column: 1 / span 2;
+  }
+  .spouse1{
+    grid-column: 1 / span 2;
+  }
+  .child1{
+    grid-column: 1 / span 2;
+  }
+  .meal1{
+    grid-column: 1 / span 2;
+  }
+  .skill, .skill1{
+    grid-column: 1 / span 2;
+  }
+  .skill, .meal, .child, .spouse, .house{
+    display: flex;
+    flex-flow: wrap column;
+  }
+  #homeImgContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #itemImageDescription, #houseInformation, #houseImages{
+    display: flex;
+    flex-direction: row;
+  }
+  #houseDescription, #houseLocation{
+    display: flex;
+    flex-direction: column;
+    padding-left:4.5vw;
+    padding-right:3.5vw;
+  }
+  #houseContent{
+    margin-right:3vw;
+  }
+  h1{
+    font-family: MedievalSharp;
+    font-size: 3.5vw;
+    text-align: left;
+  }
+  .meal1 h1, .skill1 h1, .child1 h1, .spouse1 h1, .house1 h1{
+    font-family: MedievalSharp;
+    font-size: 3vw;
+    text-align: center;
+  }
+  p{
+    font-family: Roboto-Light;
+    font-size: 2vw;
+    text-align: left;
+  }
+  .about1 p, .item1 p, .skill1 p, .child1 p, .meal1 p, .spouse1 p, .house1 p{
+    font-family: Roboto-Light;
+    font-size: 2vw;
+    text-align: center;
+  }
+  .about1 h1, .item1 h1{
+    font-family: MedievalSharp;
+    font-size: 6vw;
+    text-align: center;
+  }
+  #headerSection h1{
+    font-family: MedievalSharp;
+    font-size:min(5.5vw, 40px);;
+    color: #fff2e6;
+    text-shadow: #2F3F32 5px 5px;
+  }
+  ul{
+    text-align: left;
+    font-family: Roboto-Light;
+    font-size: 2vw;
+    display: inline-block;
+    padding-left:1vw;
+  }
+  #houseContent ul{
+    text-align: left;
+    font-family: Roboto-Light;
+    font-size: 2vw;
+    display: inline-block;
+    padding-left:2vw;
+  }
+  #footerSection p{
+    text-align: left;
+    color: white;
+    font-family: MedievalSharp;
+    font-size: 1.7vw;
+  }
+  .homeImg{
+    object-fit: cover;
+    height:60vw;
+    width:65vw;
+    padding: .8vw;;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .skillImg{
+    object-fit: cover;
+    height:50vw;
+    width: 40vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 3vw;
+    padding-bottom: 1vw;
+  }
+  .mealImg{
+    object-fit: contain;
+    height:15vw;
+    width:24vw;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-right:3vw;
+  }
+  .childImg{
+    object-fit: cover;
+    height:30vw;
+    width:20vw;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-right:3vw;
+  }
+  .spouseImg{
+    object-fit: cover;
+    height:40vw;
+    width:30vw;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-right:3vw;
+  }
+  .houseImg{
+    object-fit: cover;
+    height:25vw;
+    width:25vw;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-right:3vw;
+    padding-bottom:1vw;
+  }
+  #houseLocation #houseImages{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  hr{
+      height: 0px;
+      border: none;
+      border-top: .2vw solid black;
+  }
+  span{
+    font-family: Roboto-Regular;
+  }
+}
+
+@media screen and (min-width: 600px){
+  #mainContainer{
+    display: flex;
+    background-color: #fff2e6;
+    overflow-x: hidden;
+  }
+  .nav{
+    display: inline-flex;
+    justify-content: flex-end;
+    background-color: #2F3F32;
+    overflow: hidden;
+    position: fixed;
+    top:50px;
+    width:100%;
+  }
+  .nav ul{
+    display: inline-flex;
+    overflow: hidden;
+  }
+  .nav a{
+    font-family:MedievalSharp;
+    display: inline-flex;
+    align-items: flex-end;
+    color: #f2f2f2;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .nav a:hover{
+    display: inline-flex;
+    background-color: #eee;
+    color: black;
+  }
+  .nav a.active{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: #8CA665;
+    color: white;
+  }
+  #headerSection{
+    height:50px;
+    width:100%;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('skyrimBridgeHeader.jpg');
+    background-size: cover;
+    position: fixed;
+  }
+  #contentContainer, #contentContainer{
+    width: 100%;
+    height: 100%;
+    padding-top:95px;
+    display:inline-flex;
+    text-align:center;
+    flex-direction: column;
+  }
+  #footerSection{
+    width: 100%;
+    height:7.5vw;
+    padding: 1vw;
+    background-color: #2F3F32;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .grid-container{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 2vw;
+    background-color: #997f71;
+    padding: 2vw;
+  }
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1vw 1vw;
+    font-size: 30px;
+  }
+  .item1, .item2{
+    grid-column: 1 / span 2;
+  }
+  .about1, .about2{
+    grid-column: 1 / span 2;
+  }
+  .house, .house1{
+    grid-column: 1 / span 2;
+  }
+  .spouse1{
+    grid-column: 1 / span 2;
+  }
+  .child1{
+    grid-column: 1 / span 2;
+  }
+  .meal1{
+    grid-column: 1 / span 2;
+  }
+  .skill, .skill1{
+    grid-column: 1 / span 2;
+  }
+  .skill, .meal, .child, .spouse, .house{
+    display: flex;
+    flex-flow: wrap column;
+  }
+  br{
+    font-size: 10%;
+  }
+  #homeImgContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #itemImageDescription, #houseInformation, #houseImages{
+    display: flex;
+    flex-direction: row;
+  }
+  #houseDescription, #houseLocation{
+    display: flex;
+    flex-direction: column;
+    padding-left:4.5vw;
+    padding-right:3.5vw;
+  }
+  #houseContent{
+    margin-right:3vw;
+  }
+  h1{
+    font-family: MedievalSharp;
+    font-size: 3vw;
+    text-align: left;
+  }
+  .meal1 h1, .skill1 h1, .child1 h1, .spouse1 h1, .house1 h1{
+    font-family: MedievalSharp;
+    font-size: 3vw;
+    text-align: center;
+  }
+  p{
+    font-family: Roboto-Light;
+    font-size: 2vw;
+    text-align: left;
+  }
+  .about1 p, .item1 p, .skill1 p, .child1 p, .meal1 p, .spouse1 p, .house1 p{
+    font-family: Roboto-Light;
+    font-size: 2vw;
+    text-align: center;
+  }
+  .about1 h1, .item1 h1{
+    font-family: MedievalSharp;
+    font-size: 6vw;
+    text-align: center;
+  }
+  #headerSection h1{
+    font-family: MedievalSharp;
+    font-size:min(5vw, 40px);;
+    color: #fff2e6;
+    text-shadow: #2F3F32 5px 5px;
+  }
+  ul{
+    text-align: left;
+    font-family: Roboto-Light;
+    font-size: 2vw;
+    display: inline-block;
+    padding-left:1vw;
+  }
+  #houseContent ul{
+    text-align: left;
+    font-family: Roboto-Light;
+    font-size: 2vw;
+    display: inline-block;
+    padding-left:2vw;
+  }
+  #footerSection p{
+    text-align: left;
+    color: white;
+    font-family: MedievalSharp;
+    font-size: 1.7vw;
+  }
+  .homeImg{
+    object-fit: cover;
+    height:30vw;
+    width:35vw;
+    padding: .8vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .skillImg{
+    object-fit: cover;
+    height:50vw;
+    width: 40vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 3vw;
+    padding-bottom: 1vw;
+  }
+  .mealImg{
+    object-fit: contain;
+    height:15vw;
+    width:24vw;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-right:3vw;
+  }
+  .childImg{
+    object-fit: cover;
+    height:30vw;
+    width:20vw;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-right:3vw;
+  }
+  .spouseImg{
+    object-fit: cover;
+    height:40vw;
+    width:30vw;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-right:3vw;
+  }
+  .houseImg{
+    object-fit: cover;
+    height:25vw;
+    width:25vw;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-right:3vw;
+    padding-bottom:1vw;
+  }
+  #houseLocation #houseImages{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  hr{
+      height: 0px;
+      border: none;
+      border-top: .2vw solid black;
+  }
+  span{
+    font-family: Roboto-Regular;
+  }
+}
